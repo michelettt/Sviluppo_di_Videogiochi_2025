@@ -1,2 +1,3 @@
 # Sviluppo-di-Videogiochi-2025
-Sviluppo del progetto di William Tinella e Michele Tondi per l'esame di Sviluppo di Videogiochi, CdL Informatica presso UniBa
+
+Il progetto tratta dello sviluppo di un videogioco chiamato "Don't Joke About Revenge". Sviluppato tramite Godot Engine in GDScript(linguaggio simile a Python), il progetto vede lo sviluppo di un titolo videoludico ispirato al genere "Beat 'Em Up", un picchiaduro a scorrimento laterale. 
