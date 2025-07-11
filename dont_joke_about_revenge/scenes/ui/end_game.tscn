@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://crt2fiw0e5srn"]
+
+[ext_resource type="Script" uid="uid://dwloq0bblt34n" path="res://scenes/ui/end_game.gd" id="1_ewul1"]
+[ext_resource type="Theme" uid="uid://xujyuvvstsau" path="res://gui_theme.tres" id="1_fnkk4"]
+[ext_resource type="Texture2D" uid="uid://diuj3uuvauolw" path="res://assets/art/backgrounds/MAXPOPOPO.png" id="1_gpnx6"]
+
+[node name="EndGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ewul1")
+music = 4
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 1, 1)
+
+[node name="TUTUTUMAX" type="Sprite2D" parent="ColorRect"]
+position = Vector2(-417, -3)
+scale = Vector2(2.02174, 0.43083)
+texture = ExtResource("1_gpnx6")
+centered = false
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 16.0
+offset_right = 193.0
+offset_bottom = 43.0
+theme = ExtResource("1_fnkk4")
+theme_override_constants/outline_size = 5
+text = "GRAZIE PER AVER GIOCATO
+LA DEMO!"
+horizontal_alignment = 1

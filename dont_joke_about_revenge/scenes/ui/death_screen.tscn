@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt1ywyykr2wmj"]
+
+[ext_resource type="Script" uid="uid://buelsrlstu4mf" path="res://scenes/ui/death_screen.gd" id="1_njuei"]
+[ext_resource type="Theme" uid="uid://xujyuvvstsau" path="res://gui_theme.tres" id="2_w6at5"]
+
+[node name="DeathScreen" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+script = ExtResource("1_njuei")
+countdown_start = 10
+
+[node name="Border" type="ColorRect" parent="."]
+layout_mode = 2
+color = Color(0.533333, 0.533333, 0.533333, 0.533333)
+
+[node name="MarginContainer" type="MarginContainer" parent="Border"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 1
+theme_override_constants/margin_top = 1
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="Content" type="ColorRect" parent="Border/MarginContainer"]
+layout_mode = 2
+color = Color(0.0784314, 0.0784314, 0.0784314, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Border/MarginContainer/Content"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Border/MarginContainer/Content/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_w6at5")
+theme_override_colors/font_color = Color(0.95158, 0.95158, 0.95158, 0.8)
+text = "RESPAWN?"
+horizontal_alignment = 1
+
+[node name="CountdownLabel" type="Label" parent="Border/MarginContainer/Content/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_w6at5")
+text = "10"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

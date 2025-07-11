@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://8p5gruxocx5y"]
+
+[ext_resource type="PackedScene" uid="uid://df3rikr3va82q" path="res://scenes/stage/stage.tscn" id="1_05nt0"]
+[ext_resource type="Texture2D" uid="uid://cjgetv228ctj3" path="res://assets/art/backgrounds/city.png" id="2_05nt0"]
+[ext_resource type="PackedScene" uid="uid://bkc2erd4706qe" path="res://scenes/stage/checkpoint.tscn" id="3_o3esi"]
+[ext_resource type="PackedScene" uid="uid://dv0080mtbogqj" path="res://scenes/characters/igor_boss.tscn" id="4_hsnae"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05nt0"]
+size = Vector2(20, 57.5)
+
+[node name="Stage_02_bar" instance=ExtResource("1_05nt0")]
+
+[node name="MainBackgorund" parent="Backgrounds" index="0"]
+position = Vector2(0, -144)
+texture = ExtResource("2_05nt0")
+
+[node name="StaticBody2D" parent="WorldColliders" index="0"]
+position = Vector2(104, 64)
+
+[node name="Checkpoint" parent="Checkpoints" index="0" instance=ExtResource("3_o3esi")]
+position = Vector2(49, 0)
+nb_simultaneous_enemies = 4
+
+[node name="IgorBoss" parent="Checkpoints/Checkpoint/Enemies" index="0" instance=ExtResource("4_hsnae")]
+position = Vector2(209, 96)
+
+[node name="PlayerSpawnLocation" parent="." index="6"]
+position = Vector2(31, 106)
+
+[node name="CollisionShape2D" parent="StageComplete" index="0"]
+position = Vector2(306, 100.75)
+shape = SubResource("RectangleShape2D_05nt0")
+
+[editable path="Checkpoints/Checkpoint"]

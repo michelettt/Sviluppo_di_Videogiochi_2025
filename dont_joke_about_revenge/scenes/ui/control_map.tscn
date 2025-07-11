@@ -1,0 +1,142 @@
+[gd_scene load_steps=9 format=3 uid="uid://dj5fqoratg7ra"]
+
+[ext_resource type="Script" uid="uid://dvfdllnyixrgm" path="res://scenes/ui/control_map.gd" id="1_a3ltj"]
+[ext_resource type="Texture2D" uid="uid://dfajuxv4n73ur" path="res://assets/art/keyboard/X Key.png" id="1_n4vdf"]
+[ext_resource type="Theme" uid="uid://xujyuvvstsau" path="res://gui_theme.tres" id="2_mny2b"]
+[ext_resource type="Texture2D" uid="uid://d1dibakqptq52" path="res://assets/art/keyboard/C key.png" id="2_wvq8a"]
+[ext_resource type="Texture2D" uid="uid://cowaxi5wd8ocm" path="res://assets/art/keyboard/Left arrow key.png" id="3_a3ltj"]
+[ext_resource type="Texture2D" uid="uid://3ed6dryj625i" path="res://assets/art/keyboard/Down arrow key.png" id="4_j801j"]
+[ext_resource type="Texture2D" uid="uid://cmucx3ri3vwvk" path="res://assets/art/keyboard/Right arrow key.png" id="5_sk8fc"]
+[ext_resource type="Texture2D" uid="uid://d0ad0c4quy48o" path="res://assets/art/keyboard/Up arrow key.png" id="6_r76yt"]
+
+[node name="ControlMap" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a3ltj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.136826, 0.136826, 0.136826, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+offset_right = 32.0
+offset_bottom = 79.0
+
+[node name="Control" type="Control" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control4" type="Control" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control5" type="Control" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control6" type="Control" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Control7" type="Control" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Jump" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_mny2b")
+theme_override_constants/outline_size = 5
+text = "
+  jump"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Attack" type="Label" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_mny2b")
+theme_override_constants/outline_size = 5
+text = "
+
+  attack"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Control2" type="Control" parent="ColorRect/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="ColorRect/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Control4" type="Control" parent="ColorRect/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Control5" type="Control" parent="ColorRect/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Movement" type="Label" parent="ColorRect/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("2_mny2b")
+theme_override_constants/outline_size = 5
+text = "
+
+
+
+movement    "
+horizontal_alignment = 1
+uppercase = true
+
+[node name="CKey" type="Sprite2D" parent="."]
+position = Vector2(27, 61)
+scale = Vector2(2, 2)
+texture = ExtResource("2_wvq8a")
+centered = false
+
+[node name="LeftArrowKey" type="Sprite2D" parent="."]
+position = Vector2(94, 48)
+scale = Vector2(2, 2)
+texture = ExtResource("3_a3ltj")
+centered = false
+
+[node name="DownArrowKey" type="Sprite2D" parent="."]
+position = Vector2(122, 48)
+scale = Vector2(2, 2)
+texture = ExtResource("4_j801j")
+centered = false
+
+[node name="RightArrowKey" type="Sprite2D" parent="."]
+position = Vector2(150, 48)
+scale = Vector2(2, 2)
+texture = ExtResource("5_sk8fc")
+centered = false
+
+[node name="UpArrowKey" type="Sprite2D" parent="."]
+position = Vector2(122, 22)
+scale = Vector2(2, 2)
+texture = ExtResource("6_r76yt")
+centered = false
+
+[node name="XKey" type="Sprite2D" parent="."]
+position = Vector2(27, 14)
+scale = Vector2(2, 2)
+texture = ExtResource("1_n4vdf")
+centered = false

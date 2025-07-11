@@ -1,0 +1,224 @@
+[gd_scene load_steps=5 format=3 uid="uid://d7ovxf0foop7"]
+
+[ext_resource type="Theme" uid="uid://xujyuvvstsau" path="res://gui_theme.tres" id="1_irhji"]
+[ext_resource type="Script" uid="uid://cthh26kbwgmos" path="res://scenes/ui/start_menu.gd" id="1_m0hmm"]
+[ext_resource type="PackedScene" uid="uid://dnutd88j0wwgs" path="res://scenes/ui/controls/label_picker.tscn" id="2_0kjv3"]
+[ext_resource type="Texture2D" uid="uid://drm1h22d5mki5" path="res://assets/art/backgrounds/cyberpunk-street.png" id="2_km2yg"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m0hmm")
+music = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect/MarginContainer"]
+position = Vector2(-82, 54)
+texture = ExtResource("2_km2yg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="DontJokeAbout" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_irhji")
+theme_override_colors/font_color = Color(0.993446, 0.993337, 2.15626e-05, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_font_sizes/font_size = 12
+text = "Don't Joke About"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Revenge" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_irhji")
+theme_override_colors/font_color = Color(1, 0.0392157, 0.439216, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_font_sizes/font_size = 12
+text = "Revenge"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Spacer" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_irhji")
+theme_override_colors/font_color = Color(0.803922, 0, 0.0235294, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 1
+text = "     
+
+"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="NewGame" parent="ColorRect/MarginContainer/VBoxContainer" instance=ExtResource("2_0kjv3")]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+color_active = Color(0.823529, 0, 0.823529, 1)
+color_default = Color(0, 0.85098, 0.772549, 1)
+text = "NEW GAME"
+
+[node name="Label" parent="ColorRect/MarginContainer/VBoxContainer/NewGame" index="0"]
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+
+[node name="Spacer2" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_irhji")
+theme_override_colors/font_color = Color(0.803922, 0, 0.0235294, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 1
+text = "    
+"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Options" parent="ColorRect/MarginContainer/VBoxContainer" instance=ExtResource("2_0kjv3")]
+layout_mode = 2
+color_active = Color(0.823529, 0, 0.823529, 1)
+color_default = Color(0, 0.85098, 0.772549, 1)
+text = "OPTIONS"
+
+[node name="Label" parent="ColorRect/MarginContainer/VBoxContainer/Options" index="0"]
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+
+[node name="Spacer3" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_irhji")
+theme_override_colors/font_color = Color(0.803922, 0, 0.0235294, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 1
+text = "    
+"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Scoreboard" parent="ColorRect/MarginContainer/VBoxContainer" instance=ExtResource("2_0kjv3")]
+layout_mode = 2
+color_active = Color(0.823529, 0, 0.823529, 1)
+color_default = Color(0, 0.85098, 0.772549, 1)
+text = "SCOREBOARD"
+
+[node name="Label" parent="ColorRect/MarginContainer/VBoxContainer/Scoreboard" index="0"]
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+
+[node name="Spacer4" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_irhji")
+theme_override_colors/font_color = Color(0.803922, 0, 0.0235294, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 1
+text = "    
+"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Credits" parent="ColorRect/MarginContainer/VBoxContainer" instance=ExtResource("2_0kjv3")]
+layout_mode = 2
+color_active = Color(0.823529, 0, 0.823529, 1)
+color_default = Color(0, 0.85098, 0.772549, 1)
+text = "CREDITS"
+
+[node name="Label" parent="ColorRect/MarginContainer/VBoxContainer/Credits" index="0"]
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 8
+theme_override_font_sizes/font_size = 12
+horizontal_alignment = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="NewGame" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_irhji")
+theme_override_colors/font_color = Color(0.823636, 0.000535214, 0.82363, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/outline_size = 6
+text = "New Game"
+uppercase = true
+
+[node name="Options" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_irhji")
+theme_override_colors/font_color = Color(8.85606e-06, 0.851179, 0.772991, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/outline_size = 6
+text = "Options"
+uppercase = true
+
+[node name="Scoreboard" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_irhji")
+theme_override_colors/font_color = Color(8.85606e-06, 0.851179, 0.772991, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/outline_size = 6
+text = "Scoreboard"
+uppercase = true
+
+[node name="Credits" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_irhji")
+theme_override_colors/font_color = Color(8.85606e-06, 0.851179, 0.772991, 1)
+theme_override_constants/line_spacing = 1
+theme_override_constants/outline_size = 6
+text = "Credits"
+uppercase = true
+
+[editable path="ColorRect/MarginContainer/VBoxContainer/NewGame"]
+[editable path="ColorRect/MarginContainer/VBoxContainer/Options"]
+[editable path="ColorRect/MarginContainer/VBoxContainer/Scoreboard"]
+[editable path="ColorRect/MarginContainer/VBoxContainer/Credits"]

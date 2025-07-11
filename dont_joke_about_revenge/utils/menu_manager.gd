@@ -1,0 +1,14 @@
+extends Node
+
+signal new_game
+signal delete_start_menu
+signal options_screen
+signal exit_options
+signal scoreboard_screen
+signal exit_scoreboard
+signal credits_screen
+signal exit_credits
+signal control_map
+signal exit_control_map
+signal start_menu_music
+signal end_game

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct43q12y3h8mk"]
+
+[ext_resource type="Theme" uid="uid://xujyuvvstsau" path="res://gui_theme.tres" id="1_4q4g0"]
+[ext_resource type="Script" uid="uid://dvx1bmmicx7gw" path="res://scenes/ui/dialogue_text.gd" id="1_md0sg"]
+
+[node name="DialogueText" type="Label"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4q4g0")
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 1
+autowrap_mode = 2
+uppercase = true
+script = ExtResource("1_md0sg")

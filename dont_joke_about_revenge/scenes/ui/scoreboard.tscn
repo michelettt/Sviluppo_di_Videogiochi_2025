@@ -1,0 +1,129 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm1kmrc5vayns"]
+
+[ext_resource type="Script" uid="uid://c2qoitmws82m4" path="res://scenes/ui/scoreboard.gd" id="1_0vowc"]
+[ext_resource type="Theme" uid="uid://xujyuvvstsau" path="res://gui_theme.tres" id="1_48oo3"]
+[ext_resource type="PackedScene" uid="uid://dnutd88j0wwgs" path="res://scenes/ui/controls/label_picker.tscn" id="2_48oo3"]
+
+[node name="Scoreboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0vowc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.196078, 0.470588, 0.596078, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="ScoreboardLabel" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_48oo3")
+theme_override_colors/font_color = Color(0.992157, 0.992157, 0, 1)
+theme_override_constants/outline_size = 5
+text = "SCOREBOARD"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Spacer3" type="Control" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Spacer4" type="Control" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MHL" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_48oo3")
+theme_override_colors/font_color = Color(0.992157, 0.992157, 0, 1)
+theme_override_constants/outline_size = 5
+text = "     MHL"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_48oo3")
+text = "     "
+horizontal_alignment = 1
+
+[node name="4316" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_48oo3")
+theme_override_colors/font_color = Color(0.992157, 0.992157, 0, 1)
+theme_override_constants/outline_size = 5
+text = "4316"
+horizontal_alignment = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="WIL" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("1_48oo3")
+theme_override_colors/font_color = Color(0.992157, 0.992157, 0, 1)
+theme_override_constants/outline_size = 5
+text = "     WIL"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("1_48oo3")
+text = "     "
+horizontal_alignment = 1
+
+[node name="2222" type="Label" parent="ColorRect/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("1_48oo3")
+theme_override_colors/font_color = Color(0.992157, 0.992157, 0, 1)
+theme_override_constants/outline_size = 5
+text = "2222"
+horizontal_alignment = 2
+
+[node name="Spacer2" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_48oo3")
+text = "           "
+horizontal_alignment = 1
+
+[node name="LabelPicker" parent="ColorRect/MarginContainer/VBoxContainer" instance=ExtResource("2_48oo3")]
+layout_mode = 2
+alignment = 1
+color_active = Color(0.823529, 0, 0.823529, 1)
+color_default = Color(0, 0.85098, 0.772549, 1)
+text = "RETURN"
+
+[node name="Label" parent="ColorRect/MarginContainer/VBoxContainer/LabelPicker" index="0"]
+theme_override_constants/outline_size = 5
+
+[editable path="ColorRect/MarginContainer/VBoxContainer/LabelPicker"]
